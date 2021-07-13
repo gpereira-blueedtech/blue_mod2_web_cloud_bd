@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav {
+  background-color: #0066ff;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #71aaff;
+}
+
+section#first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+section#first div#img-rocket {
+  display: flex;
+  justify-content: center;
+}
+
+section#first div img {
+  width: 60%;
+}
+
+section#first div p {
+  font-size: 2vw;
+  font-weight: 700;
+  color: #0066ff;
+}
+
+section#first div span {
+  color: #00388b;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+section#first div#first-text {
+  padding: 7rem;
+}
+
+section#sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  background-color: #0066ff;
+}
+
+section#sobre div#img-perfil img {
+  width: 60%;
+  border-radius: 50%;
+}
+
+section#sobre div#img-perfil {
+  display: flex;
+  justify-content: center;
+}
+
+section#sobre div#texto-sobre p {
+  font-size: 1.1vw;
+  text-align: justify;
+  color: #fff;
+  line-height: 2.5rem;
+}
+
+section#projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+section#projetos div {
+  padding: 2rem;
+  margin: 0 1rem 0 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+section#projetos div p {
+  text-align: justify;
+}
+
+section#projetos div h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+section#projetos div img {
+  display: block;
+  margin: auto;
+}
+
+section#projetos div button {
+  border: 1px solid #0066ff;
+  background-color: #fff;
+  color: #0066ff;
+  font-size: 0.8vw;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+
+section#projetos div button:hover {
+  background-color: #0066ff;
+  color: #fff;
+}
+
+section#habilidades {
+  padding: 3rem 10rem 3rem 10rem;
+  background-color: #d7e7ff;
+}
+
+section#habilidades h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+section#habilidades p {
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section#habilidades div {
+  display: flex;
+  border: 1px solid #0066ff;
+  border-radius: 1rem;
+}
+
+section#habilidades span#html5 {
+  background-color: #0066ff;
+  width: 90%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#css3 {
+  background-color: #0066ff;
+  width: 95%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#js {
+  background-color: #0066ff;
+  width: 80%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#angular {
+  background-color: #0066ff;
+  width: 90%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#ts {
+  background-color: #0066ff;
+  width: 85%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#python {
+  background-color: #0066ff;
+  width: 80%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#flask {
+  background-color: #0066ff;
+  width: 75%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#sql {
+  background-color: #0066ff;
+  width: 90%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#habilidades span#cloud {
+  background-color: #0066ff;
+  width: 80%;
+  color: #fff;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+section#contato {
+  padding: 3rem 10rem 3rem 10rem;
+  display: grid;
+  place-items: center;
+}
+
+section#contato h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+section#contato form {
+  width: 50%;
+}
+
+section#contato form input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+section#contato form label {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+section#contato form button {
+  border: 1px solid #0066ff;
+  background-color: #fff;
+  color: #0066ff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+  width: 40%;
+}
+
+section#contato form button:disabled {
+  border: 1px solid rgb(170, 170, 170);
+  background-color: rgb(255, 255, 255);
+  color: rgb(170, 170, 170);
+}
+
+section#contato form button:hover:disabled {
+  border: 1px solid rgb(170, 170, 170);
+  background-color: rgb(255, 255, 255);
+  color: rgb(170, 170, 170);
+}
+
+section#contato form button:hover {
+  background-color: #0066ff;
+  color: #fff;
+}
+
+section#contato div#redes a {
+  text-decoration: none;
+  color: #0066ff;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+section#contato div#redes a:hover {
+  color: #71aaff;
+  transition: 0.3s ease-in-out;
+}
+
+section#contato div#redes {
+  margin-bottom: 2rem;
+}
+
+section#contato h3 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+footer p {
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer hr {
+  width: 60%;
+  margin: auto;
+  border: 0.2px solid #3359ec;
+}
+
+footer a#thiCodeLink {
+  text-decoration: none;
+  color: #3359ec;
+}
+
+footer a#thiCodeLink:hover {
+  color: #ff01ed;
+}
+
+footer {
+  margin-top: 3rem;
+}
