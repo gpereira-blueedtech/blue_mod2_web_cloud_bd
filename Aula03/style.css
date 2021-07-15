@@ -1,0 +1,47 @@
+        /* Seletor de tipo: Vai aplicar o estilo a todas as tags do tipo definido */
+        body {
+            background-color: coral;
+            display:flex;
+            flex-wrap:wrap
+        }
+
+        div {
+            /* background-color:blue; */
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Quando eu coloco um tipo separado do outro, ele aplica se  um estiver "dentro" do outro
+        Por exemplo nesse caso: Vai aplicar a todas <ol> que estiverem dentro de uma <div>*/
+        div ol {
+            color:darkgreen;
+        }
+
+        ol {
+            text-decoration-line: underline;
+            order: -1
+        }
+        
+        /* Seletor de classe: Vai aplicar o estilo nas classes com o nome definido 
+        As classes podem ser qualquer tag (<div>,<p>, etc... )*/
+        .textocomum {
+            color: white;
+            text-decoration-line: underline;
+        }
+        
+        .organizada {
+            background-color: #cc99ff;
+            display: flex;
+            border-style: solid;
+            /* flex-direction: atribui a direção dos elementos: em linhas ou colunas */
+            /* flex-direction:column; */
+        }
+
+        /* Seletor de id: Vai aplicar o estilo no elemento com a id especificada: 
+        A id de um elemento é única dentro do código. */
+        #titulo {
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+            text-decoration-line: underline;
+            order: 1
+        }
