@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type="text/css">
+        /* Seletor de tipo: Vai aplicar o estilo a todas as tags do tipo definido */
         body {
             background-color: coral;
         }
 
         div {
+            /* background-color:blue; */
             font-weight: bold;
             font-style: italic;
         }
-
+        /* Quando eu coloco um tipo separado do outro, ele aplica se  um estiver "dentro" do outro
+        Por exemplo nesse caso: Vai aplicar a todas <ol> que estiverem dentro de uma <div>*/
         div ol {
             color:darkgreen;
         }
@@ -23,12 +26,16 @@
         ol {
             text-decoration-line: underline;
         }
-
+        
+        /* Seletor de classe: Vai aplicar o estilo nas classes com o nome definido 
+        As classes podem ser qualquer tag (<div>,<p>, etc... )*/
         .textocomum {
             color: white;
             text-decoration-line: underline;
         }
-
+        
+        /* Seletor de id: Vai aplicar o estilo no elemento com a id especificada: 
+        A id de um elemento é única dentro do código. */
         #titulo {
             font-weight: bold;
             font-style: italic;
@@ -43,7 +50,7 @@
 <body>
     <h1>Esse <em>texto</em> está fora da div</h1>
     <div>
-        <h1  id="titulo">Aula de hoje: CSS</h1>
+        <h1  id="titulo">RETORNO 21:30!!!</h1>
         <h4>Como o CSS ajuda a nossa vida</h4>
         <ul>
             <li>O que é o CSS? Aqui você está dizendo? Eu posso ir colocando texto a verdade</li>
