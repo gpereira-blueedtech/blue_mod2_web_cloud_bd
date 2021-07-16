@@ -1,0 +1,45 @@
+body {
+    background-color: #ff9999;
+}
+
+.fundobranco {
+    display: flex;
+    background-color: #ffffff;
+    font-weight: bold;
+    justify-content: space-around;
+    flex-direction: column;
+    border-style: solid;
+    align-items: stretch;
+}
+
+.fundoazul {
+    display: flex;
+    background-color: teal;
+    justify-content: space-around;
+    flex-direction: column;
+    border-style: solid;
+    align-items: stretch;
+}
+
+.listaorganizada {
+    display: flex;
+    justify-content: space-around;
+}
+
+#titulo {
+    background-color: yellowgreen;
+    color: tomato;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+
+
