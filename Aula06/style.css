@@ -1,0 +1,43 @@
+/* Seletor de tipo: aplica o estilo a todos os elementos do tipo: */
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+/* Seletor de classe: Quando preciso que vários elementos recebam o mesmo estilo */
+.fundoamarelo {
+    background-color: yellow;
+    order:0;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.fundorosa {
+    background-color:deeppink;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.classeorganizada{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+/* Seletor de ID: Quando preciso que um elemento específico receba um estilo.
+O ID de um elemento é único dentro de toda a página */
+#listaorganizada {
+    display: flex;
+    flex-direction: column;
+    background-color: fuchsia;
+    order: 0;
+    flex-grow: 2;
+    margin-left: 20px;
+}
+
+#teste {
+    order: -1;
+}
