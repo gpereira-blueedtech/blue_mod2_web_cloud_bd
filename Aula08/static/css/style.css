@@ -1,0 +1,24 @@
+header {
+    background-color: aqua;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#titulo {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem 2rem 3rem;
+}
+
+.entrada {
+    width: 50%
+}
