@@ -164,17 +164,19 @@
 
       <h3>Mande uma mensagem</h3>
 
-      <form action="/send" method="POST">
-          <label for="nome">Nome: </label>
-          <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
-          
-          <label for="email">Endereço de e-mail: </label>
-          <input type="text" name="email" id="email" placeholder="Digite o seu e-mail">
+      <form action='/send' method="POST">
+         <label for="nome">Nome</label>
+         <input type="text" placeholder="Digite seu nome" id="nome" name="nome">
 
-          <label for="mensagem">Mensagem: </label>
-          <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem"></textarea>
+         <label for="email">E-mail</label>
+         <input type="email" placeholder="Digite seu email" id="email" name="email">
 
-          <button type="submit" id="enviar">Enviar formulário</button>
+
+         <label for="mensagem">Mensagem</label>
+         <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+
+         <button type="submit" id="enviar">Enviar</button>
+
       </form>
 
       <div id="carregamento">
