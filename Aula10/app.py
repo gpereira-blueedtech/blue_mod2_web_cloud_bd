@@ -11,7 +11,6 @@
 from flask import Flask, render_template, redirect, request
 from flask_mail import Mail, Message #Importa o Mail e o Message do flask_mail para facilitar o envio de emails
 
-
 app = Flask(__name__)
 
 # Configuração do envio de email.
@@ -44,7 +43,7 @@ def index():
 @app.route('/send', methods=['GET', 'POST'])
 def send():
    if request.method == 'POST':
-      # Capiturando as informações do formulário com o request do Flask e criando o objeto formContato
+      # Capturando as informações do formulário com o request do Flask e criando o objeto formContato
       formContato = Contato(
          request.form['nome'],
          request.form['email'],

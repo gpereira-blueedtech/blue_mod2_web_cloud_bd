@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/adm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfólio | Adm</title>
+</head>
+
+<body>
+
+    <article id="msg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </article>
+
+    <aside id="left">
+
+        <!-- Código copiado da documentação: https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/ -->
+        
+
+        <h1>Administração</h1>
+        <ul>
+            <a id="btn-criar"><li>
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                Criar projetos</li>
+            </a>  
+            <a id="btn-listar"><li>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                Listar projetos</li>
+            </a> 
+            <a href="/"><li>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home</li>
+            </a>
+            <a href="/"><li>
+                <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                Sair</li>
+            </a> 
+             
+        </ul>
+    </aside>
+    
+    <section id="body">
+
+        <!-- {% if projetoEdit == undefined %} -->
+        <article id="new">
+            <form action='/new' method="POST">
+
+                <h1>Cadastre um novo projeto</h1>
+
+                <label for="nome">Digite o nome</label>
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome">
+
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem">
+
+                <label for="link">Link</label>
+                <input type="text" placeholder="Link do projeto" id="link" name="link">
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto"></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </article>
+        <!-- {% endif %} -->
+
+        <!-- {% if projetoEdit == undefined %} -->
+        <article id="lista">
+           <table>
+               <thead>
+                   <tr>
+                      <th># ID</th> 
+                      <th>Nome</th>
+                      <th>Imagem</th>
+                      <th>Link</th>
+                      <th>Descrição</th>
+                      <th>Editar/Apagar</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   {% for p in projetos %}
+                   <tr>
+                       <td>{{p.id}}</td>
+                       <td>{{p.nome}}</td>
+                       <td><a href="{{p.imagem}}" target="_blank">{{p.imagem}}</a></td>
+                       <td><a href="{{p.link}}" target="_blank">{{p.link}}</a></td>
+                       <td>{{p.descricao}}</td>
+                       <td>
+                           <a href="/edit/{{p.id}}">Editar</a>
+                           <a href="/delete/{{p.id}}">Apagar</a>
+                       </td>
+                   </tr>
+                   {% endfor %}
+               </tbody>
+           </table>
+        </article>
+        <!-- {% endif %} -->
+
+        {% if projetoEdit != undefined %}
+        <article id="edit">
+            <form action='/edit/{{projetoEdit.id}}' method="POST">
+
+                <h1>Editar um projeto</h1>
+
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" value="{{projetoEdit.nome}}">
+
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{projetoEdit.imagem}}">
+
+                <label for="link">Link</label>
+                <input type="text" placeholder="Link do projeto" id="link" name="link" value="{{projetoEdit.link}}">
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto">{{projetoEdit.descricao}}</textarea>
+
+                <div>
+                    <a href="/adm">Cancelar</a>
+                    <button type="submit">Atualizar</button>
+                </div>
+                
+
+            </form>
+        </article>
+        {% endif %}
+
+    </section>
+
+    <aside id="right">        
+        
+    </aside>
+
+
+    <script src="../static/js/adm.js"></script>
+</body>
+
+</html>

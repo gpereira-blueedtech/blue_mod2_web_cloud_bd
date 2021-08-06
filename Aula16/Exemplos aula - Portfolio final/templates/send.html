@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../static/css/send.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title>Portfólio | Send</title>
+</head>
+<body>
+
+   <section id='success'>
+      <div id="card">
+         <i class="fa fa-check-circle" aria-hidden="true"></i>
+         <h1>Olá {{formContato.nome}}, sua mensagem foi enviada com sucesso!</h1>
+         <h3>Mensagem:</h3>
+         <p>{{formContato.mensagem}}</p>
+         <a href="/">Voltar para o portfólio</a>
+      </div>
+   </section>
+
+   <!--Script para voltar automáticamente para a tela principal-->
+
+   <script>
+      setTimeout(() => { // Função que cria um timer de espera
+         window.location.href = '/' // manda para a rota '/'
+      }, 10000) // espera 10.000 milisegundos (10seg) pra ir pra rota
+   </script>
+   
+</body>
+</html>
